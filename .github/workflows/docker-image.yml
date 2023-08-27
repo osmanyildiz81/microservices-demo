@@ -28,4 +28,4 @@ jobs:
           context: .
           file: deploy/kubernetes/Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/sockshop:${{ github.sha }}
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/sockshop:${{github.run_number}}
