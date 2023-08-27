@@ -1,4 +1,4 @@
-name: ci
+name: ci-sock-shop
 
 on:
   push:
@@ -26,6 +26,6 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           context: .
-          file: ./Dockerfile
+          file: deploy/kubernetes/Dockerfile
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/clockbox:latest
